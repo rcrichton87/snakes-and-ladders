@@ -30,11 +30,21 @@ while game.check_victory(active_player, board.size) == false do
   roll = dice.roll_dice
   active_piece = active_player.piece
   active_piece.move_piece(roll)
-  if active_piece.landed_on_snake_ladder(board) == true
-    active_piece.fall_or_climb(active_piece.landed_on_snake_ladder_return_snakeladder(board))
+  if active_piece.landed_on_snake_ladder(board) != nil
+    snake_or_ladder = active_piece.landed_on_snake_ladder(board)
+    active_piece.fall_or_climb(active_piece.landed_on_snake_ladder(board))
+    puts "#{active_player.name} moves from #{snake_or_ladder.start} to #{snake_or_ladder.end}"
+  end
+  if game.check_victory(active_player, board.size) == true
+    break
   end
   active_player = game.next_player(active_player)
   
 end
 
 puts "#{active_player.name} wins!"
+for player in array_of_players
+#  piece = player.piece
+#  final_position = piece.position
+  puts "#{player.name} ended at square #{player.piece.position}"
+end

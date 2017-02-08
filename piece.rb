@@ -19,18 +19,10 @@ attr_accessor :position
   def landed_on_snake_ladder(board)
     for snake_ladder in board.array_of_s_and_l
       if @position == snake_ladder.start
-        return true
-      end
-    end
-    return false
-  end
-
-  def landed_on_snake_ladder_return_snakeladder(board)
-    for snake_ladder in board.array_of_s_and_l
-      if @position == snake_ladder.start
         return snake_ladder
       end
     end
-    return false
+    return nil
   end
+
 end
