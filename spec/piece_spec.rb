@@ -9,6 +9,7 @@ class Test_Piece < MiniTest::Test
 
   def setup
     @piece1= Piece.new("Blue")
+    
     @snake1 = SnakeLadder.new(43, 12)
     @ladder1 = SnakeLadder.new(3, 32)
   end
