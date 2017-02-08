@@ -17,9 +17,13 @@ game = Game.new(array_of_players)
 snake1 = SnakeLadder.new(43, 12)
 snake2 = SnakeLadder.new(63, 47)
 snake3 = SnakeLadder.new(21, 9)
+snake4 = SnakeLadder.new(60, 7)
+snake5 = SnakeLadder.new(42, 21)
 ladder1 = SnakeLadder.new(3, 32)
 ladder2 = SnakeLadder.new(11, 30)
 ladder3 = SnakeLadder.new(49, 54)
+ladder4 = SnakeLadder.new(22, 44)
+ladder5 = SnakeLadder.new(10, 35)
 array_s_and_l = [snake1, snake2, snake3, ladder1, ladder2, ladder3]
 board= Board.new(64, array_s_and_l )
 
