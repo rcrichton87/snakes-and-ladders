@@ -21,6 +21,12 @@ def test_start_position
  assert_equal(expected, actual) 
 end
 
+def test_move_piece
+  expected = 7
+  actual = @piece1.move_piece(6)
+  assert_equal(expected, actual)
+end
+
 
 
 
