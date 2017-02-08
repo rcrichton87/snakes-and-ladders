@@ -12,7 +12,16 @@ attr_accessor :position
   end
 
   def fall_or_climb(snake_ladder)
-  return @position = snake_ladder.end
+    return @position = snake_ladder.end
   end
 
+
+  def landed_on_snake_ladder(piece, board)
+    for snake_ladder in board.array_of_s_and_l
+      if piece.position == snake_ladder.start
+        return true
+      end
+    end
+    return false
+  end
 end

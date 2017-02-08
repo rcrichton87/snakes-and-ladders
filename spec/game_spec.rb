@@ -37,7 +37,7 @@ def test_game_continue
   expected=false
   actual = @game.check_victory(@player1,@board.size)
   assert_equal(expected, actual)
-  end
+end
 
 def test_player_turns
   expected = @player2
