@@ -23,10 +23,10 @@ ladder3 = SnakeLadder.new(49, 54)
 array_s_and_l = [snake1, snake2, snake3, ladder1, ladder2, ladder3]
 board= Board.new(64, array_s_and_l )
 
-active_player = array_of_players[0]
+active_player = array_of_players[array_of_players.length - 1]
 
 while game.check_victory(active_player, board.size) == false do
-
+  active_player = game.next_player(active_player)
   roll = dice.roll_dice
   active_piece = active_player.piece
   active_piece.move_piece(roll)
@@ -35,16 +35,9 @@ while game.check_victory(active_player, board.size) == false do
     active_piece.fall_or_climb(active_piece.landed_on_snake_ladder(board))
     puts "#{active_player.name} moves from #{snake_or_ladder.start} to #{snake_or_ladder.end}"
   end
-  if game.check_victory(active_player, board.size) == true
-    break
-  end
-  active_player = game.next_player(active_player)
-  
 end
 
 puts "#{active_player.name} wins!"
 for player in array_of_players
-#  piece = player.piece
-#  final_position = piece.position
   puts "#{player.name} ended at square #{player.piece.position}"
 end
