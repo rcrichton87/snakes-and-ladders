@@ -15,4 +15,9 @@ def test_has_start_position
   assert_equal(3, @ladder1.start)
 end
 
+def test_has_end_position
+  assert_equal(12, @snake1.end)
+  assert_equal(32, @ladder1.end)
+end
+
 end
