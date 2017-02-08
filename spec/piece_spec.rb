@@ -45,7 +45,7 @@ end
 def test_landed_on_snake__is_true
   expected = true
   @piece1.move_piece(42)
-  actual = @piece1.landed_on_snake_ladder(@piece1, @board)
+  actual = @piece1.landed_on_snake_ladder(@board)
   assert_equal(expected, actual)
 end
 
