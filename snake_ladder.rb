@@ -6,4 +6,6 @@ class SnakeLadder
     @start = start
     @end = end_position
   end
+
+  
 end

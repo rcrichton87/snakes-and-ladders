@@ -1,5 +1,8 @@
 require('minitest/autorun')
 require_relative('../snake_ladder.rb')
+require_relative('../piece.rb')
+require_relative('../player.rb')
+require_relative('../dice.rb')
 
 require('minitest/rg')
 
@@ -8,6 +11,7 @@ class Test_SnakeLadder < MiniTest::Test
   def setup
     @snake1 = SnakeLadder.new(43, 12)
     @ladder1 = SnakeLadder.new(3, 32)
+    @piece1= Piece.new("Blue")
   end 
 
 def test_has_start_position
@@ -19,5 +23,7 @@ def test_has_end_position
   assert_equal(12, @snake1.end)
   assert_equal(32, @ladder1.end)
 end
+
+
 
 end
